@@ -11,8 +11,20 @@ import Image from 'next/image';
 import clipboardIcon from '../assets/content_copy_24dp_FILL0_wght400_GRAD0_opsz24.svg';
 import success from '../assets/check_24dp_FILL0_wght400_GRAD0_opsz24.svg'
 import { useState } from 'react';
+import { Selector } from '../components/Selector'
+
 
 export default function NoOppositeContent() {
+    const dropdownOptions = [
+        { label: 'Option 1', value: '1' },
+        { label: 'Option 2', value: '2' },
+        { label: 'Option 3', value: '3' }
+    ];
+    
+    const handleSelect = (value: string) => {
+        console.log('Selected value:', value);
+    };
+    
     const codeString1 = `npm i mvk-ui`;
     const [copy1, setCopy1] = useState(false)
 
@@ -24,7 +36,7 @@ export default function NoOppositeContent() {
                     padding: 0,
                 },
             }}
-            className='ml-[17px]'
+            className='ml-[60px]'
         >
             <TimelineItem>
                 <TimelineSeparator>
@@ -101,7 +113,16 @@ export default function NoOppositeContent() {
                 <TimelineSeparator>
                     <TimelineDot />
                 </TimelineSeparator>
-                <TimelineContent className='text-lg'>Here's the demo of a component.</TimelineContent>
+                <TimelineContent className='flex'>
+                <p className='text-lg'>Here's the demo of a component.</p>
+                <div className='ml-10 mt-[-8px]'>
+                    <Selector
+                        options={dropdownOptions}
+                        placeholder="Select an option"
+                        onSelect={handleSelect}
+                    />
+                </div>
+                </TimelineContent>
             </TimelineItem>
         </Timeline>
     );

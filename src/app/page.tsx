@@ -7,7 +7,6 @@ import clipboardIcon from '../assets/content_copy_24dp_FILL0_wght400_GRAD0_opsz2
 import success from '../assets/check_24dp_FILL0_wght400_GRAD0_opsz24.svg'
 import icon from '../assets/dark-icon.svg'
 import { useState } from 'react';
-import { Selector } from '../components/Selector'
 import CopyCode from '@/components/CopyCode';
 import Timeline from '../components/Timeline'
 
@@ -17,17 +16,6 @@ export default function Home() {
   const codeString2 = `yarn add mvk-ui`
   const [copy1, setCopy1] = useState(false)
   const [copy2, setCopy2] = useState(false)
-
-
-  const dropdownOptions = [
-    { label: 'Option 1', value: '1' },
-    { label: 'Option 2', value: '2' },
-    { label: 'Option 3', value: '3' }
-  ];
-
-  const handleSelect = (value: string) => {
-    console.log('Selected value:', value);
-  };
 
   return (
     <div className='mb-80'>
@@ -116,9 +104,8 @@ export default function Home() {
         </div>
       </div>
       <div className="get_started flex w-screen">
-
         <div className="left w-1/2">
-          <div className="flex ml-3">
+          <div className="flex ml-16">
             <div className="bg-[transparent] w-[55px] h-[55px] flex justify-center rounded-xl border-[1px] border-slate-400">
               <Image src={icon} alt='icon' className='h-[25px] w-[50px] mt-[15px]' />
             </div>
@@ -126,23 +113,12 @@ export default function Home() {
           </div>
           <Timeline />
         </div>
-
         <div className="right w-1/2">
-          <div className="flex flex-col justify-end items-end">
-          <div className='border-[3px] mt-[15px] rounded-lg w-80 h-32 flex justify-center items-center'>
-            <div className=''>
-              <Selector
-                options={dropdownOptions}
-                placeholder="Select an option"
-                onSelect={handleSelect}
-              />
-            </div>
-          </div>
-          <div className='mt-24'>
+          <div className="flex flex-col justify-center items-center">
+          <div className='mt-[20px]'>
             <CopyCode />
           </div>
         </div>
-
         </div>
       </div>
     </div>

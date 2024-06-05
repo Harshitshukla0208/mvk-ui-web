@@ -31,7 +31,7 @@ const Selector: FC<DropdownProps> = ({
     return (
         <div className="relative w-48">
         <div
-            className="bg-[#fff] flex items-center justify-between px-4 py-2 border-[3px] border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors duration-300"
+            className="bg-[#fff] flex items-center justify-between px-4 py-2 border-[3px] border-blue-500 rounded-lg cursor-pointer hover:border-cyan-500 transition-colors duration-300"
             onClick={toggleDropdown}
         >
             <span>{selected ? selected.label : placeholder}</span>
