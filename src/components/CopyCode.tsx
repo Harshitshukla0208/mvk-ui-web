@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Image from 'next/image';
 import clipboardIcon from '../assets/content_copy_24dp_FILL0_wght400_GRAD0_opsz24.svg';
-import success from '../assets/check_24dp_FILL0_wght400_GRAD0_opsz24.svg'
-import { useState } from 'react';
+import success from '../assets/check_24dp_FILL0_wght400_GRAD0_opsz24.svg';
 
 const CopyCode = () => {
     const codeString1 = 
     `
+
     import { Selector } from 'mvk-ui';
     import './App.css'
     
@@ -35,49 +35,42 @@ const CopyCode = () => {
         );
     };
     
-    export default App`;
-    const [copy1, setCopy1] = useState(false)
+    export default App
+    `;
+
+    const [copy1, setCopy1] = useState(false);
 
     return (
-        <div>
-            <div className="flex justify-center mt-1 mb-2 w-[550px] bg-[#282c34] rounded-lg overflow-hidden">
-            <SyntaxHighlighter language="jsx" style={atomOneDark}>
-                {codeString1}
-            </SyntaxHighlighter>
-            <div className="mt-2 px-4 text-white text-xs">
-                {
-                copy1 ?
-                    (
-                    <button className="py-1">
-                        <span className='flex mt-1 ml-[-40px] text-white'>
-                        <Image src={success} alt="Code Copied" />
-                        <p className='mt-1'>Copied!</p>
-                        </span>
-                    </button>
-                    ) :
-                    (
-                    <button
-                        className="py-1"
-                        onClick={() => {
-                        navigator.clipboard.writeText(codeString1);
-                        setCopy1(true);
-                        setTimeout(() => {
-                            setCopy1(false)
-                        }, 3000);
-                        }}
-                    >
-                        <span className='flex mt-1 ml-[-50px] text-white'>
-                        <Image src={clipboardIcon} alt="Copy Code" />
-                        <p className='mt-1'>Copy code</p>
-                        </span>
-                        
-                    </button>
-                    )
-                }
-            </div>
+        <div className="p-4 flex justify-center">
+            <div className="relative w-[85%] md:w-[500px] bg-[#282c34] rounded-lg overflow-hidden">
+                <SyntaxHighlighter language="jsx" style={atomOneDark} customStyle={{ margin: 0 }}>
+                    {codeString1}
+                </SyntaxHighlighter>
+                <div className="absolute top-2 right-2">
+                    {copy1 ? (
+                        <button className="py-1 flex items-center text-white">
+                            <Image src={success} alt="Code Copied" />
+                            <p className="ml-2 text-xs">Copied!</p>
+                        </button>
+                    ) : (
+                        <button
+                            className="py-1 flex items-center text-white"
+                            onClick={() => {
+                                navigator.clipboard.writeText(codeString1);
+                                setCopy1(true);
+                                setTimeout(() => {
+                                    setCopy1(false);
+                                }, 3000);
+                            }}
+                        >
+                            <Image src={clipboardIcon} alt="Copy Code" />
+                            <p className="ml-2 text-xs">Copy code</p>
+                        </button>
+                    )}
+                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default CopyCode
+export default CopyCode;

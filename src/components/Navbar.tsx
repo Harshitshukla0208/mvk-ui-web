@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
         <nav>
             <div className="navbar bg-transparent">
                 <div className="flex-1">
-                    <a className="btn btn-ghost text-3xl">MVK-UI</a>
+                    <a className="btn btn-ghost text-3xl">mvk-ui</a>
                 </div>
                 <div className="flex-none">
                     <button className="btn btn-square btn-ghost flex items-center justify-center">
