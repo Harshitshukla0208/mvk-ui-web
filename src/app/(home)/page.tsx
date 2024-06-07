@@ -1,14 +1,15 @@
 "use client"
-import Navbar from '../components/Navbar';
+import Navbar from '../../components/Navbar';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Image from 'next/image';
-import clipboardIcon from '../assets/content_copy_24dp_FILL0_wght400_GRAD0_opsz24.svg';
-import success from '../assets/check_24dp_FILL0_wght400_GRAD0_opsz24.svg';
-import icon from '../assets/dark-icon.svg';
+import clipboardIcon from '../../assets/content_copy_24dp_FILL0_wght400_GRAD0_opsz24.svg';
+import success from '../../assets/check_24dp_FILL0_wght400_GRAD0_opsz24.svg';
+import icon from '../../assets/dark-icon.svg';
 import { useState } from 'react';
 import CopyCode from '@/components/CopyCode';
-import Timeline from '../components/Timeline';
+import Timeline from '../../components/Timeline';
+import Link from 'next/link'
 
 export default function Home() {
   const codeString1 = `npm i mvk-ui`;
@@ -24,7 +25,9 @@ export default function Home() {
           <div className="max-w-md mx-auto">
             <h1 className="text-5xl font-bold">Rapidly build websites using mvk-ui</h1>
             <p className="py-6">Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.</p>
-            <button className="btn btn-primary">Get Started</button>
+            <Link href={'/components/buttons'}>
+              <button className="btn btn-primary">Get Started</button>
+            </Link>
 
             {/* code-copy-boxes */}
             <div className="codebox-container flex flex-col md:flex-row gap-2 md:gap-4 md:ml-[20px] mt-6 items-center justify-center">
