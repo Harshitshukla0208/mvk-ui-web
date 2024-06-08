@@ -1,17 +1,20 @@
 "use client";
 import { useState } from 'react';
 import Link from 'next/link';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
 
 const components = [
     { name: 'Button', path: '/components/buttons' },
-    { name: 'Input', path: '/input' },
-    { name: 'SearchBar', path: '/searchbar' },
-    { name: 'Textarea', path: '/textarea' },
-    { name: 'Avatar', path: '/avatar' },
-    { name: 'Navbar', path: '/navbar' },
-    { name: 'Footer', path: '/footer' },
-    { name: 'Selector', path: '/components/selector' }
+    { name: 'Login form', path: '/components/login-form' },
+    { name: 'File selector', path: '/components/file-selector' },
+    { name: 'Cards', path: '/components/cards' },
+    { name: 'Navbar', path: '/components/navbar' },
+    { name: 'Footer', path: '/components/footer' },
+    { name: 'Selector', path: '/components/selector' },
+    { name: 'Text area', path: '/components/text-area' },
+    { name: 'Search bar', path: '/components/search-bar' },
+    { name: 'Input', path: '/components/input' },
+    { name: 'Avatar', path: '/components/avatar' },
 ];
 
 const SideDrawer: React.FC = () => {
@@ -35,7 +38,9 @@ const SideDrawer: React.FC = () => {
                     {components.map(component => (
                         <li key={component.name} className="p-2 hover:bg-gray-700 cursor-pointer">
                             <Link href={component.path} onClick={toggleDrawer}>
-                                {component.name}
+                                <div>
+                                    {component.name}
+                                </div>
                             </Link>
                         </li>
                     ))}
@@ -51,7 +56,9 @@ const SideDrawer: React.FC = () => {
                     {components.map(component => (
                         <li key={component.name} className="p-2 hover:bg-gray-700 cursor-pointer">
                             <Link href={component.path}>
-                                {component.name}
+                                <div>
+                                    {component.name}
+                                </div>
                             </Link>
                         </li>
                     ))}

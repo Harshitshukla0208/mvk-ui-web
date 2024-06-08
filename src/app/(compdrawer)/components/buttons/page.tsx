@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { Primarybtn, Secondarybtn, Dangerbtn, Successbtn } from 'mvk-ui'
-import BtnCodes  from '@/components/BtnCodeBoxes'
+import {BtnCodes}  from '@/components/CodeBoxes'
 
 const Page = () => {
     return (
