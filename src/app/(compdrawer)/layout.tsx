@@ -15,14 +15,17 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+
     return (
         <html lang="en">
         <body className={inter.className}>
-            <div className="flex">
-                <div className="md:w-64">
+            <div className="flex h-screen overflow-hidden">
+                <div className={`fixed top-0 bottom-0 z-30 transform md:translate-x-0 transition-transform duration-300 ease-in-out md:w-64`}>
                     <SideDrawer />
                 </div>
-                {children}
+                <div className="flex-1 md:ml-64 overflow-y-auto">
+                    {children}
+                </div>
             </div>
         </body>
         </html>
