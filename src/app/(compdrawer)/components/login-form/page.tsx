@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { LoginForm } from 'mvk-ui'
-import {LoginFormCode}  from '@/components/CodeBoxes'
+import LoginFormCode from '@/components/CodeBoxes/LoginFormCode'
 
 const Page = () => {
     const handleLogin = (username: string, email: string, password: string) => {
@@ -21,7 +21,7 @@ const Page = () => {
                 <p className='opacity-40 hover:opacity-60'>#</p>
                 <p className='component-preview-title'>Preview</p>
             </div>
-            <div className="relative mt-5 border-[#f0f0f0] border-[2px] rounded-xl h-80 md:h-[30rem] w-full md:w-[75%] p-4 bg-white overflow-hidden mx-auto">
+            <div className="relative mt-5 border-[#f0f0f0] border-[2px] rounded-xl h-90 md:h-[30rem] w-full md:w-[75%] p-4 bg-white overflow-hidden mx-auto">
                 <div className="absolute inset-0 rotated-bg transform origin-top-left" style={{ width: '120%', height: '205%' }}>
                     {/* This div is only for background */}
                 </div>

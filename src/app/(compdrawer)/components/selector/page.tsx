@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { Selector } from 'mvk-ui'
-import {SelectorCode}  from '@/components/CodeBoxes'
+import SelectorCode from '@/components/CodeBoxes/SelectorCode'
 
 const Page = () => {
     const dropdownOptions = [

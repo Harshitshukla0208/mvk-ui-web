@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { FilePicker } from 'mvk-ui'
-import {FileSelectorCode}  from '@/components/CodeBoxes'
+import FileSelectorCode from '@/components/CodeBoxes/FileSelectorCode';
 import { useState } from 'react';
 
 const Page = () => {
