@@ -10,6 +10,7 @@ import { useState } from 'react';
 import CopyCode from '@/components/CopyCode';
 import Timeline from '../../components/Timeline';
 import Link from 'next/link'
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const codeString1 = `npm i mvk-ui`;
@@ -18,15 +19,15 @@ export default function Home() {
   const [copy2, setCopy2] = useState(false);
 
   return (
-    <div className='mb-80'>
+    <div className='mb-10'>
       <Navbar />
       <div className="hero bg-transparent" style={{ height: '650px' }}>
         <div className="hero-content text-center">
           <div className="max-w-md mx-auto">
             <h1 className="text-5xl font-bold">Rapidly build websites using mvk-ui</h1>
             <p className="py-6">Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.</p>
-            <Link href={'/components/buttons'}>
-              <button className="btn btn-primary">Get Started</button>
+            <Link href={'/components/cards'}>
+              <button className="btn btn-primary">Explore components...</button>
             </Link>
 
             {/* code-copy-boxes */}
@@ -109,6 +110,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -29,7 +29,9 @@ const SideDrawer: React.FC = () => {
             {/* Mobile Drawer */}
             <div className={`fixed z-40 top-0 left-0 h-full bg-gray-800 text-white transition-transform md:hidden ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 <div className="p-4 flex justify-between items-center">
-                    <h2 className="text-lg font-bold">Components</h2>
+                    <Link href={'/'}>
+                        <h2 className="text-lg font-bold">Components</h2>
+                    </Link>
                     <button onClick={toggleDrawer}>
                         <FaTimes size={24} />
                     </button>
@@ -50,7 +52,9 @@ const SideDrawer: React.FC = () => {
             {/* Desktop Drawer */}
             <div className="hidden md:block md:w-64 bg-gray-800 text-white">
                 <div className="p-4">
-                    <h2 className="text-lg font-bold">Components</h2>
+                    <Link href={'/'}>
+                        <h2 className="text-lg font-bold">Components</h2>
+                    </Link>
                 </div>
                 <ul className="p-4">
                     {components.map(component => (

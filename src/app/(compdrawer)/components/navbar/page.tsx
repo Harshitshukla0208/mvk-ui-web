@@ -23,7 +23,7 @@ const Page = () => {
                 <p className='opacity-40 hover:opacity-60'>#</p>
                 <p className='component-preview-title'>Preview</p>
             </div>
-            <div className="relative mt-5 border-[#f0f0f0] border-[2px] rounded-xl w-full h-80 p-4 bg-white overflow-hidden mx-auto">
+            <div className="relative mt-5 border-[#f0f0f0] border-[2px] rounded-xl w-full h-80 md:h-60 p-4 bg-white overflow-hidden mx-auto">
                 <div className="absolute inset-0 rotated-bg transform origin-top-left" style={{ width: '120%', height: '205%' }}>
                     {/* This div is only for background */}
                 </div>
