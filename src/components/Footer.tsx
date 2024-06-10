@@ -12,7 +12,7 @@ const Footer = () => {
                 href="https://github.com/Harshitshukla0208"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl md:text-2xl"
+                className="text-2xl md:text-2xl"
             >
                 <FontAwesomeIcon icon={faGithub} />
             </a>
@@ -21,7 +21,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/harshit-shukla-9a5950239/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl md:text-2xl"
+                className="text-2xl md:text-2xl"
             >
                 <FontAwesomeIcon icon={faLinkedin} />
             </a>
