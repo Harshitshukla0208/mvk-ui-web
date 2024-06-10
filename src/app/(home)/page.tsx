@@ -19,20 +19,20 @@ export default function Home() {
   const [copy2, setCopy2] = useState(false);
 
   return (
-    <div className='mb-10'>
+    <div className='mb-10 overflow-x-hidden'>
       <Navbar />
-      <div className="hero bg-transparent" style={{ height: '650px' }}>
-        <div className="hero-content text-center">
+      <div className="hero bg-transparent h-[650px] md:h-auto">
+        <div className="hero-content text-center px-4 md:px-0">
           <div className="max-w-md mx-auto">
-            <h1 className="text-5xl font-bold">Rapidly build websites using mvk-ui</h1>
-            <p className="py-6">Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.</p>
+            <h1 className="text-3xl md:text-5xl font-bold">Rapidly build websites using mvk-ui</h1>
+            <p className="py-4 md:py-6 text-sm md:text-base">Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.</p>
             <Link href={'/components/cards'}>
               <button className="btn btn-primary">Explore components...</button>
             </Link>
 
             {/* code-copy-boxes */}
             <div className="codebox-container flex flex-col md:flex-row gap-2 md:gap-4 md:ml-[20px] mt-6 items-center justify-center">
-              <div className="codebox1 flex justify-center mt-1 w-full md:w-[195px] bg-[#282c34] rounded-lg overflow-hidden">
+              <div className="codebox1 flex justify-center mt-1 w-[80%] md:w-[195px] bg-[#282c34] rounded-lg overflow-hidden">
                 <SyntaxHighlighter language="jsx" style={atomOneDark} customStyle={{ padding: '10px', paddingLeft: '20px' }}>
                   {codeString1}
                 </SyntaxHighlighter>
@@ -61,7 +61,7 @@ export default function Home() {
                   )}
                 </div>
               </div>
-              <div className="codebox2 flex justify-center mt-1 w-full md:w-[218px] bg-[#282c34] rounded-lg overflow-hidden">
+              <div className="codebox2 flex justify-center mt-1 w-[80%] md:w-[218px] bg-[#282c34] rounded-lg overflow-hidden">
                 <SyntaxHighlighter language="jsx" style={atomOneDark} customStyle={{ padding: '10px', paddingLeft: '20px' }}>
                   {codeString2}
                 </SyntaxHighlighter>
@@ -94,8 +94,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="get_started flex flex-col lg:flex-row w-full lg:w-screen px-4 md:px-0">
-        <div className="left w-full lg:w-1/2">
+      <div className="get_started flex flex-col md:flex-row w-full px-4 md:px-0">
+        <div className="left w-full md:w-1/2">
           <div className="flex ml-4 lg:ml-16">
             <div className="bg-[transparent] w-[55px] h-[55px] flex justify-center rounded-xl border-[1px] border-slate-400">
               <Image src={icon} alt='icon' className='h-[25px] w-[50px] mt-[15px]' />
@@ -104,13 +104,13 @@ export default function Home() {
           </div>
           <Timeline />
         </div>
-        <div className="right w-full lg:w-1/2 mt-4 lg:mt-0 flex justify-center">
+        <div className="right w-full md:w-1/2 mt-4 md:mt-0 flex justify-center">
           <div className='md:mt-[-5px] mt-[20px]  p-4 lg:p-0'>
             <CopyCode />
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

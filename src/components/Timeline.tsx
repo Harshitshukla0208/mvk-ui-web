@@ -53,7 +53,7 @@ export default function NoOppositeContent() {
                 </TimelineSeparator>
                 <TimelineContent className="flex flex-col md:flex-row items-start md:items-center text-lg">
                     <p className="md:mt-[-40px]">Install mvk-ui as a Node package</p>
-                    <div className="flex justify-center mt-7 md:mt-[-8px] md:ml-10 mb-7 w-full md:w-[210px] bg-[#282c34] rounded-lg overflow-hidden">
+                    <div className="flex justify-center mt-7 md:mt-[-8px] md:ml-10 mb-7 w-[80%] md:w-[210px] bg-[#282c34] rounded-lg overflow-hidden">
                         <SyntaxHighlighter language="jsx" style={atomOneDark} customStyle={{ padding: '10px', paddingLeft: '20px' }}>
                             {codeString1}
                         </SyntaxHighlighter>
