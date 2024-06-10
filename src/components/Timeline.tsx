@@ -11,7 +11,7 @@ import Image from 'next/image';
 import clipboardIcon from '../assets/content_copy_24dp_FILL0_wght400_GRAD0_opsz24.svg';
 import success from '../assets/check_24dp_FILL0_wght400_GRAD0_opsz24.svg';
 import { useState } from 'react';
-import { Selector } from '../components/Selector';
+import { Selector } from '../components/Selector'
 
 export default function NoOppositeContent() {
     const dropdownOptions = [
