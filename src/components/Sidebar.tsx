@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 import Link from 'next/link';
-import { FaTimes } from 'react-icons/fa';
+import { FaTimes, FaHome } from 'react-icons/fa';
 
 const components = [
     { name: 'Button', path: '/components/buttons' },
@@ -28,13 +28,15 @@ const SideDrawer: React.FC = () => {
         <div className="flex h-screen">
             {/* Mobile Drawer */}
             <div className={`fixed z-40 top-0 left-0 h-full bg-gray-800 text-white transition-transform md:hidden ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-                <div className="p-4 flex justify-between items-center">
+                <div className="p-4 flex gap-4 justify-between items-center">
                     <Link href={'/'}>
                         <h2 className="text-lg font-bold">Components</h2>
                     </Link>
-                    <button onClick={toggleDrawer}>
-                        <FaTimes size={24} />
-                    </button>
+                    <div className="flex items-center gap-4">
+                        <button onClick={toggleDrawer}>
+                            <FaTimes size={18} />
+                        </button>
+                    </div>
                 </div>
                 <ul className="p-4">
                     {components.map(component => (
@@ -51,9 +53,12 @@ const SideDrawer: React.FC = () => {
 
             {/* Desktop Drawer */}
             <div className="hidden md:block md:w-64 bg-gray-800 text-white">
-                <div className="p-4">
+                <div className="p-4 flex justify-between items-center">
                     <Link href={'/'}>
                         <h2 className="text-lg font-bold">Components</h2>
+                    </Link>
+                    <Link href={'/'}>
+                        <FaHome size={18} />
                     </Link>
                 </div>
                 <ul className="p-4">
@@ -71,8 +76,8 @@ const SideDrawer: React.FC = () => {
 
             <div className="flex-1 p-4 md:p-0">
                 {/* Hamburger Button */}
-                <button className="md:hidden text-black bg-gray-100 p-2 rounded m-0" onClick={toggleDrawer}>
-                    ☰
+                <button className="flex gap-2 md:hidden text-black bg-gray-100 p-2 rounded m-0" onClick={toggleDrawer}>
+                    ☰ <p className='text-xs mt-1'>explore more...</p>
                 </button>
             </div>
         </div>
