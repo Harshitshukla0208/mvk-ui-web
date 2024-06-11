@@ -8,6 +8,7 @@ import success from '../../assets/check_24dp_FILL0_wght400_GRAD0_opsz24.svg';
 const AvatarCode = () => {
     const codeString1 =
     `
+    
     "use client"  // for nextJS
     import React from 'react';
     import { Avatar } from 'mvk-ui';
@@ -37,7 +38,7 @@ const AvatarCode = () => {
 
     return (
         <div className="p-4 flex justify-center">
-            <div className="relative w-[100%] md:w-[500px] bg-[#282c34] rounded-xl overflow-hidden">
+            <div className="relative w-[100%] md:w-[500px] bg-[#282c34] rounded-xl overflow-hidden text-sm md:text-base">
                 <SyntaxHighlighter language="jsx" style={atomOneDark} customStyle={{ margin: 0 }}>
                     {codeString1}
                 </SyntaxHighlighter>

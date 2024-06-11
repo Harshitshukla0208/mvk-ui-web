@@ -32,7 +32,7 @@ export default function Home() {
 
             {/* code-copy-boxes */}
             <div className="codebox-container flex flex-col md:flex-row gap-2 md:gap-4 md:ml-[20px] mt-6 items-center justify-center">
-              <div className="codebox1 flex justify-center mt-1 w-[80%] md:w-[195px] bg-[#282c34] rounded-lg overflow-hidden">
+              <div className="codebox1 flex justify-center mt-1 w-[80%] md:w-[195px] bg-[#282c34] rounded-lg overflow-hidden text-sm md:text-base">
                 <SyntaxHighlighter language="jsx" style={atomOneDark} customStyle={{ padding: '10px', paddingLeft: '20px', fontSize:'0.9em' }}>
                   {codeString1}
                 </SyntaxHighlighter>
@@ -61,7 +61,7 @@ export default function Home() {
                   )}
                 </div>
               </div>
-              <div className="codebox2 flex justify-center mt-1 w-[80%] md:w-[218px] bg-[#282c34] rounded-lg overflow-hidden">
+              <div className="codebox2 flex justify-center mt-1 w-[80%] md:w-[218px] bg-[#282c34] rounded-lg overflow-hidden text-sm md:text-base">
                 <SyntaxHighlighter language="jsx" style={atomOneDark} customStyle={{ padding: '10px', paddingLeft: '20px', fontSize:'0.9em' }}>
                   {codeString2}
                 </SyntaxHighlighter>

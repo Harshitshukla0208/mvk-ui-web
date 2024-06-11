@@ -76,8 +76,8 @@ const SideDrawer: React.FC = () => {
 
             <div className="flex-1 p-4 md:p-0">
                 {/* Hamburger Button */}
-                <button className="flex gap-2 md:hidden text-black bg-gray-100 p-2 rounded m-0" onClick={toggleDrawer}>
-                    ☰ <p className='text-xs mt-1'>explore more...</p>
+                <button className="flex gap-2 md:hidden text-black text-lg bg-gray-100 p-2 rounded m-0" onClick={toggleDrawer}>
+                    ☰ <p className='text-xs mt-2'>explore more...</p>
                 </button>
             </div>
         </div>

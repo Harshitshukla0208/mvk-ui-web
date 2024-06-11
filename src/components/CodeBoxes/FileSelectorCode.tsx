@@ -44,7 +44,7 @@ export default App;
 
     return (
         <div className="p-3 flex justify-center">
-            <div className="relative w-[100%] md:w-[600px] bg-[#282c34] rounded-xl overflow-hidden">
+            <div className="relative w-[100%] md:w-[600px] bg-[#282c34] rounded-xl overflow-hidden text-sm md:text-base">
                 <SyntaxHighlighter language="jsx" style={atomOneDark} customStyle={{ marginLeft: '15px' }}>
                     {codeString1}
                 </SyntaxHighlighter>
