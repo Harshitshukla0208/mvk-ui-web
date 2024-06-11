@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div className='mb-10 overflow-x-hidden'>
       <Navbar />
-      <div className="hero bg-transparent h-[650px] md:h-auto">
+      <div className="hero bg-transparent h-[650px] md:h-auto md:mt-[100px] md:mb-[100px]">
         <div className="hero-content text-center px-4 md:px-0">
           <div className="max-w-md mx-auto">
             <h1 className="text-3xl md:text-5xl font-bold">Rapidly build websites using mvk-ui</h1>
@@ -94,13 +94,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="get_started flex flex-col md:flex-row w-full px-4 md:px-0">
+      <div className="get_started flex flex-col md:flex-row w-full px-1 md:px-0">
         <div className="left w-full md:w-1/2">
           <div className="flex ml-4 lg:ml-16">
             <div className="bg-[transparent] w-[55px] h-[55px] flex justify-center rounded-xl border-[1px] border-slate-400">
               <Image src={icon} alt='icon' className='h-[25px] w-[50px] mt-[15px]' />
             </div>
-            <h1 className='font-[525] text-4xl mt-2 ml-2'>Get started</h1>
+            <h1 className='font-[525] text-3xl md:text-4xl mt-2 ml-2'>Get started</h1>
           </div>
           <Timeline />
         </div>

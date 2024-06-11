@@ -42,7 +42,7 @@ export default function NoOppositeContent() {
                     <TimelineDot />
                     <TimelineConnector />
                 </TimelineSeparator>
-                <TimelineContent className="text-lg">
+                <TimelineContent className="text-sm md:text-lg">
                     Jump right into building with mvk-ui, install it via package manager.
                 </TimelineContent>
             </TimelineItem>
@@ -51,9 +51,9 @@ export default function NoOppositeContent() {
                     <TimelineDot />
                     <TimelineConnector />
                 </TimelineSeparator>
-                <TimelineContent className="flex flex-col md:flex-row items-start md:items-center text-lg">
+                <TimelineContent className="flex flex-col md:flex-row items-start md:items-center text-sm md:text-lg">
                     <p className="md:mt-[-40px]">Install mvk-ui as a Node package</p>
-                    <div className="flex justify-center mt-7 md:mt-[-8px] md:ml-10 mb-7 w-[80%] md:w-[210px] bg-[#282c34] rounded-lg overflow-hidden">
+                    <div className="flex justify-center mt-7 md:mt-[-8px] md:ml-10 mb-7 w-[85%] md:w-[210px] bg-[#282c34] rounded-lg overflow-hidden">
                         <SyntaxHighlighter language="jsx" style={atomOneDark} customStyle={{ padding: '10px', paddingLeft: '20px', fontSize:'0.9em' }}>
                             {codeString1}
                         </SyntaxHighlighter>
@@ -89,7 +89,7 @@ export default function NoOppositeContent() {
                     <TimelineDot />
                     <TimelineConnector />
                 </TimelineSeparator>
-                <TimelineContent className="text-lg">
+                <TimelineContent className="text-sm md:text-lg">
                     Import the component you want to use.
                 </TimelineContent>
             </TimelineItem>
@@ -98,7 +98,7 @@ export default function NoOppositeContent() {
                     <TimelineDot />
                     <TimelineConnector />
                 </TimelineSeparator>
-                <TimelineContent className="text-lg">
+                <TimelineContent className="text-sm md:text-lg">
                     And just copy the code and paste it where you want to use it.
                 </TimelineContent>
             </TimelineItem>
@@ -107,7 +107,7 @@ export default function NoOppositeContent() {
                     <TimelineDot />
                     <TimelineConnector />
                 </TimelineSeparator>
-                <TimelineContent className="text-lg">
+                <TimelineContent className="text-sm md:text-lg">
                     Make sure to pass the suitable props along with the component.
                 </TimelineContent>
             </TimelineItem>
@@ -115,7 +115,7 @@ export default function NoOppositeContent() {
                 <TimelineSeparator>
                     <TimelineDot />
                 </TimelineSeparator>
-                <TimelineContent className="flex flex-col md:flex-row items-start md:items-center text-lg">
+                <TimelineContent className="flex flex-col md:flex-row items-start md:items-center text-sm md:text-lg">
                     <p className="md:mt-[-30px]">Here&apos;s the demo of a component.</p>
                     <div className="mt-4 md:mt-[-30px] md:ml-10">
                         <Selector options={dropdownOptions} placeholder="Select an option" onSelect={handleSelect} />

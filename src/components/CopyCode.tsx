@@ -7,10 +7,11 @@ import success from '../assets/check_24dp_FILL0_wght400_GRAD0_opsz24.svg';
 
 const CopyCode = () => {
     const codeString1 = `
-        import { Selector } from 'mvk-ui';
-        import './App.css'
 
-        const App = () => {
+    import { Selector } from 'mvk-ui';
+    import './App.css'
+
+    const App = () => {
         const dropdownOptions = [
             { label: 'Option 1', value: '1' },
             { label: 'Option 2', value: '2' },
@@ -23,23 +24,23 @@ const CopyCode = () => {
 
         return (
             <div className="app-container">
-            <Selector
-                options={dropdownOptions}
-                placeholder="Select an option"
-                onSelect={handleSelect}
-            />
-            {/* Other components */}
+                <Selector
+                    options={dropdownOptions}
+                    placeholder="Select an option"
+                    onSelect={handleSelect}
+                />
+                {/* Other components */}
             </div>
         );
-        };
+    };
 
-        export default App
+    export default App
     `;
     const [copy1, setCopy1] = useState(false);
 
     return (
         <div className="p-0 flex justify-center">
-            <div className="relative w-[90%] md:w-[500px] bg-[#282c34] rounded-xl overflow-hidden">
+            <div className="relative w-[95%] md:w-[500px] bg-[#282c34] rounded-xl overflow-hidden">
                 <SyntaxHighlighter language="jsx" style={atomOneDark} customStyle={{ margin: 0 }}>
                 {codeString1}
                 </SyntaxHighlighter>

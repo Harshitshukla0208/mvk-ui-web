@@ -8,6 +8,11 @@ const Navbar: React.FC = () => {
                     <a className="btn btn-ghost text-3xl" href="#">mvk-ui</a>
                 </div>
                 <div className="flex-none">
+                    <a href="https://www.npmjs.com/package/mvk-ui" target="_blank" rel="noopener noreferrer">
+                        <button className="btn btn-square btn-ghost flex items-center justify-center ml-2">
+                            <p className='text-sm md:text-lg'>npm</p>
+                        </button>
+                    </a>
                     <a href="https://github.com/Harshitshukla0208/mvk-ui" target="_blank" rel="noopener noreferrer">
                         <button className="btn btn-square btn-ghost flex items-center justify-center">
                             <svg
