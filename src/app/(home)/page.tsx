@@ -105,7 +105,7 @@ export default function Home() {
           <Timeline />
         </div>
         <div className="right w-full md:w-1/2 mt-4 md:mt-0 flex justify-center">
-          <div className='md:mt-[-5px] mt-[20px]  p-4 lg:p-0'>
+          <div className='md:mt-[-5px] mt-[20px] p-0 lg:p-0 overflow-x-hidden'>
             <CopyCode />
           </div>
         </div>

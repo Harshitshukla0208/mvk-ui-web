@@ -38,8 +38,8 @@ const CopyCode = () => {
     const [copy1, setCopy1] = useState(false);
 
     return (
-        <div className="p-4 flex justify-center">
-            <div className="relative w-[80%] md:w-[500px] bg-[#282c34] rounded-xl overflow-hidden">
+        <div className="p-0 flex justify-center">
+            <div className="relative w-[90%] md:w-[500px] bg-[#282c34] rounded-xl overflow-hidden">
                 <SyntaxHighlighter language="jsx" style={atomOneDark} customStyle={{ margin: 0 }}>
                 {codeString1}
                 </SyntaxHighlighter>
