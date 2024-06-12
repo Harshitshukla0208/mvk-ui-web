@@ -55,7 +55,7 @@ const SearchBarsCodes = () => {
     const [copy1, setCopy1] = useState(false);
 
     return (
-        <div className="p-4 flex justify-center">
+        <div className="p-0 flex justify-center">
             <div className="relative w-[100%] md:w-[500px] bg-[#282c34] rounded-xl overflow-hidden text-sm md:text-base">
                 <SyntaxHighlighter language="jsx" style={atomOneDark} customStyle={{ margin: 0 }}>
                     {codeString1}
